@@ -11,7 +11,7 @@
 
         // Determines which key was pressed
         var userGuess = event.key;
-        textTyped = textTyped + userGuess;  
+        textTyped = textTyped + userGuess + ", ";  
 
         // Randomly chooses a choice from the options array. This is the Computer's guess.
         var computerGuess = options[Math.floor(Math.random() * options.length)];
