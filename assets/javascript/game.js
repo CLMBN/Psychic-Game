@@ -15,21 +15,24 @@
 
         // Randomly chooses a choice from the options array. This is the Computer's guess.
         var computerGuess = options[Math.floor(Math.random() * options.length)];
-
-
+        document.querySelector("#psychic").innerHTML = "<img src='assets/images/psychic.jpg'>";
+        
       if (userGuess === computerGuess) {
           wins++;
           guesses = 9;
           textTyped = "";
+          document.querySelector("#psychic").innerHTML = "<img src='assets/images/esp.jpg'>";
       }
+
       else {
           guesses--;
-      }
+        }
 
       if (guesses < 1){
         guesses = 9;
         losses++;  
-        textTyped = "";      
+        textTyped = ""; 
+        document.querySelector("#psychic").innerHTML = "<img src='assets/images/lose.jpg'>";
       }
 
 
